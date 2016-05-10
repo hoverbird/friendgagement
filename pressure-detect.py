@@ -10,8 +10,9 @@ GPIO.setup(23, GPIO.IN)
 GPIO.setup(24, GPIO.IN)
 
 while True:
-	if (GPIO.input(23) == False):
+	print(GPIO.input(23))
+	if (GPIO.input(23) == True):
 		os.system('omxplayer -o local example.mp3 &')
-
-	sleep(0.1);
+		# os.system('mpg123 -q example.mp3 &')
+	sleep(0.5);
 
